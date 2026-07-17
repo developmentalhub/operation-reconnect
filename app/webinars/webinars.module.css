@@ -1,0 +1,753 @@
+.page {
+  --ink: #16212b;
+  --cream: #fffaf2;
+  --white: #ffffff;
+  --coral: #ef8c75;
+  --yellow: #f5cc55;
+  --green: #9dd8b6;
+  --blue: #91c8e2;
+
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--cream);
+  color: var(--ink);
+}
+
+.hero {
+  padding: 84px 24px 110px;
+  background: var(--blue);
+  border-bottom: 4px solid var(--ink);
+}
+
+.heroInner {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
+  gap: 72px;
+  align-items: center;
+}
+
+.heroCopy {
+  max-width: 760px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  padding: 12px 18px;
+  border: 3px solid var(--ink);
+  border-radius: 12px;
+  background: var(--yellow);
+  box-shadow: 5px 5px 0 var(--ink);
+  font-size: 0.9rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transform: rotate(-1.5deg);
+}
+
+.hero h1 {
+  max-width: 820px;
+  margin: 34px 0 0;
+  font-size: clamp(3.3rem, 7vw, 6.8rem);
+  font-weight: 950;
+  line-height: 0.92;
+  letter-spacing: -0.065em;
+}
+
+.heroLead {
+  max-width: 720px;
+  margin: 34px 0 0;
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
+  font-weight: 750;
+  line-height: 1.55;
+}
+
+.heroText {
+  max-width: 700px;
+  margin: 18px 0 0;
+  font-size: 1.12rem;
+  line-height: 1.75;
+}
+
+.heroActions {
+  margin-top: 34px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.primaryButton,
+.secondaryButton,
+.darkButton {
+  min-height: 58px;
+  padding: 16px 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  box-shadow: 5px 5px 0 var(--ink);
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.primaryButton {
+  background: var(--yellow);
+  color: var(--ink);
+}
+
+.secondaryButton {
+  background: var(--white);
+  color: var(--ink);
+}
+
+.darkButton {
+  background: var(--ink);
+  color: var(--white);
+  box-shadow: 5px 5px 0 rgba(22, 33, 43, 0.3);
+}
+
+.primaryButton:hover,
+.secondaryButton:hover,
+.darkButton:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.dateCard {
+  position: relative;
+  min-height: 480px;
+  padding: 44px 34px 38px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid var(--ink);
+  border-radius: 34px;
+  background: var(--white);
+  box-shadow: 12px 12px 0 var(--ink);
+  text-align: center;
+  transform: rotate(2deg);
+}
+
+.dateSticker {
+  position: absolute;
+  top: -22px;
+  left: 28px;
+  padding: 10px 16px;
+  border: 3px solid var(--ink);
+  border-radius: 10px;
+  background: var(--coral);
+  box-shadow: 4px 4px 0 var(--ink);
+  font-size: 0.85rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transform: rotate(-5deg);
+}
+
+.dateDay {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.dateNumber {
+  margin: 8px 0;
+  font-size: clamp(6rem, 11vw, 9rem);
+  font-weight: 950;
+  line-height: 0.9;
+  letter-spacing: -0.08em;
+}
+
+.dateMonth {
+  margin: 0;
+  font-size: 1.55rem;
+  font-weight: 950;
+}
+
+.dateRule {
+  width: 100%;
+  height: 4px;
+  margin: 28px 0 24px;
+  background: var(--ink);
+}
+
+.dateTime {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 900;
+}
+
+.dateMeta {
+  margin: 8px 0 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.freeSticker {
+  position: absolute;
+  right: -22px;
+  bottom: 32px;
+  padding: 12px 18px;
+  border: 3px solid var(--ink);
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 4px 4px 0 var(--ink);
+  font-size: 1rem;
+  font-weight: 950;
+  transform: rotate(10deg);
+}
+
+.detailsSection {
+  padding: 86px 24px 104px;
+}
+
+.detailsGrid {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.detailCard {
+  min-height: 210px;
+  padding: 30px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+  border: 4px solid var(--ink);
+  border-radius: 26px;
+  box-shadow: 8px 8px 0 var(--ink);
+}
+
+.detailYellow {
+  background: var(--yellow);
+  transform: rotate(-1deg);
+}
+
+.detailGreen {
+  background: var(--green);
+  transform: rotate(1deg);
+}
+
+.detailCoral {
+  background: var(--coral);
+  transform: rotate(-0.8deg);
+}
+
+.detailBlue {
+  background: var(--blue);
+  transform: rotate(0.8deg);
+}
+
+.detailLabel {
+  font-size: 0.92rem;
+  font-weight: 950;
+  line-height: 1;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.detailValue {
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
+  font-weight: 950;
+  line-height: 1.3;
+}
+
+.introSection {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto 110px;
+  padding: 72px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 78px;
+  align-items: start;
+  border: 4px solid var(--ink);
+  border-radius: 34px;
+  background: var(--white);
+  box-shadow: 11px 11px 0 var(--ink);
+}
+
+.introHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.introHeading h2,
+.realClassroomsCopy h2,
+.sectionHeading h2,
+.toolCopy h2,
+.audienceCard h2,
+.finalCard h2 {
+  margin: 0;
+  font-size: clamp(2.4rem, 4.5vw, 4.8rem);
+  font-weight: 950;
+  line-height: 0.98;
+  letter-spacing: -0.052em;
+}
+
+.introCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.introCopy p,
+.realClassroomsCopy p,
+.toolCopy p,
+.audienceCard p,
+.finalCard p {
+  margin: 0;
+  font-size: 1.12rem;
+  line-height: 1.78;
+}
+
+.sticker {
+  display: inline-flex;
+  width: fit-content;
+  padding: 11px 17px;
+  border: 3px solid var(--ink);
+  border-radius: 11px;
+  background: var(--coral);
+  box-shadow: 4px 4px 0 var(--ink);
+  font-size: 0.88rem;
+  font-weight: 950;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transform: rotate(-2deg);
+}
+
+.yellowSticker {
+  background: var(--yellow);
+}
+
+.realClassroomsSection {
+  padding: 0 24px 110px;
+}
+
+.realClassroomsInner {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  padding: 72px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+  gap: 70px;
+  align-items: center;
+  border: 4px solid var(--ink);
+  border-radius: 34px;
+  background: var(--green);
+  box-shadow: 11px 11px 0 var(--ink);
+}
+
+.realClassroomsCopy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.classSizeCard {
+  min-height: 320px;
+  padding: 38px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid var(--ink);
+  border-radius: 50%;
+  background: var(--yellow);
+  box-shadow: 9px 9px 0 var(--ink);
+  text-align: center;
+  transform: rotate(3deg);
+}
+
+.classSizeCard span {
+  font-size: clamp(4.2rem, 8vw, 7rem);
+  font-weight: 950;
+  line-height: 0.9;
+  letter-spacing: -0.07em;
+}
+
+.classSizeCard strong {
+  margin-top: 8px;
+  font-size: 1.6rem;
+  font-weight: 950;
+}
+
+.classSizeCard small {
+  max-width: 180px;
+  margin-top: 16px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.learningSection {
+  padding: 96px 24px 116px;
+  background: var(--ink);
+  color: var(--white);
+}
+
+.sectionHeading {
+  width: min(860px, 100%);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.sectionHeading p {
+  max-width: 720px;
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.learningGrid {
+  width: min(1180px, 100%);
+  margin: 64px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.learningCard {
+  min-height: 340px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  border: 4px solid var(--white);
+  border-radius: 28px;
+  color: var(--ink);
+  box-shadow: 8px 8px 0 var(--white);
+}
+
+.learningYellow {
+  background: var(--yellow);
+}
+
+.learningGreen {
+  background: var(--green);
+}
+
+.learningCoral {
+  background: var(--coral);
+}
+
+.learningBlue {
+  background: var(--blue);
+}
+
+.learningNumber {
+  font-size: 0.95rem;
+  font-weight: 950;
+  letter-spacing: 0.12em;
+}
+
+.learningCard h3 {
+  margin: 34px 0 18px;
+  font-size: 1.65rem;
+  font-weight: 950;
+  line-height: 1.15;
+}
+
+.learningCard p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.toolSection {
+  padding: 110px 24px;
+}
+
+.toolCard {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  padding: 72px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+  gap: 70px;
+  align-items: start;
+  border: 4px solid var(--ink);
+  border-radius: 34px;
+  background: var(--coral);
+  box-shadow: 11px 11px 0 var(--ink);
+}
+
+.toolCopy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.toolList {
+  padding: 34px;
+  border: 4px solid var(--ink);
+  border-radius: 28px;
+  background: var(--white);
+  box-shadow: 8px 8px 0 var(--ink);
+}
+
+.toolList h3 {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: 950;
+  line-height: 1.2;
+}
+
+.toolList ul {
+  margin: 28px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  list-style: none;
+}
+
+.toolList li {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.toolList li > span {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--ink);
+  border-radius: 50%;
+  background: var(--green);
+  font-weight: 950;
+}
+
+.toolList li p {
+  margin: 2px 0 0;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.audienceSection {
+  padding: 10px 24px 110px;
+}
+
+.audienceGrid {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 34px;
+}
+
+.audienceCard {
+  height: 100%;
+  padding: 54px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  border: 4px solid var(--ink);
+  border-radius: 32px;
+  box-shadow: 10px 10px 0 var(--ink);
+}
+
+.audienceBlue {
+  background: var(--blue);
+  transform: rotate(-0.6deg);
+}
+
+.audienceGreen {
+  background: var(--green);
+  transform: rotate(0.6deg);
+}
+
+.audienceCard h2 {
+  font-size: clamp(2.2rem, 3.6vw, 3.8rem);
+}
+
+.finalSection {
+  padding: 0 24px 120px;
+}
+
+.finalCard {
+  width: min(980px, 100%);
+  margin: 0 auto;
+  padding: 76px 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  border: 4px solid var(--ink);
+  border-radius: 36px;
+  background: var(--blue);
+  box-shadow: 12px 12px 0 var(--ink);
+  text-align: center;
+}
+
+.finalCard h2 {
+  max-width: 760px;
+}
+
+.finalCard p {
+  max-width: 700px;
+}
+
+.contact {
+  margin-top: 4px !important;
+  font-size: 1rem !important;
+}
+
+.contact a {
+  color: var(--ink);
+  font-weight: 900;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 1000px) {
+  .heroInner,
+  .introSection,
+  .realClassroomsInner,
+  .toolCard {
+    grid-template-columns: 1fr;
+  }
+
+  .heroInner {
+    gap: 64px;
+  }
+
+  .dateCard {
+    width: min(460px, 100%);
+    margin: 0 auto;
+  }
+
+  .detailsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .learningGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .classSizeCard {
+    width: min(340px, 100%);
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero {
+    padding: 64px 20px 90px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 14vw, 5rem);
+  }
+
+  .heroActions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .primaryButton,
+  .secondaryButton,
+  .darkButton {
+    width: 100%;
+  }
+
+  .detailsSection {
+    padding: 70px 20px 84px;
+  }
+
+  .introSection,
+  .realClassroomsInner,
+  .toolCard {
+    padding: 44px 30px;
+  }
+
+  .introSection {
+    width: min(100% - 40px, 1180px);
+    gap: 42px;
+    margin-bottom: 84px;
+  }
+
+  .learningSection {
+    padding: 80px 20px 92px;
+  }
+
+  .learningGrid,
+  .audienceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .learningCard {
+    min-height: 0;
+  }
+
+  .audienceCard {
+    padding: 42px 30px;
+    transform: none;
+  }
+
+  .finalCard {
+    padding: 54px 30px;
+  }
+}
+
+@media (max-width: 560px) {
+  .detailsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .detailCard {
+    min-height: 165px;
+    transform: none;
+  }
+
+  .dateCard {
+    min-height: 430px;
+    padding: 42px 24px 34px;
+  }
+
+  .freeSticker {
+    right: -8px;
+  }
+
+  .introSection,
+  .realClassroomsInner,
+  .toolCard,
+  .finalCard {
+    border-radius: 26px;
+    box-shadow: 7px 7px 0 var(--ink);
+  }
+
+  .introSection,
+  .realClassroomsInner,
+  .toolCard {
+    padding: 38px 24px;
+  }
+
+  .classSizeCard {
+    min-height: 280px;
+  }
+}
