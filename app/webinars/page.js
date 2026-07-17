@@ -31,68 +31,68 @@ const webinarDetails = [
 const learningPoints = [
   {
     number: "01",
-    title: "Introduce activities well",
+    title: "Introduce activities without instant resistance",
     description:
-      "Frame team-building in a way that feels relevant and age-appropriate for teenagers.",
+      "Learn how to explain the purpose without making the activity sound childish, awkward or like another forced icebreaker.",
     tone: "yellow",
   },
   {
     number: "02",
-    title: "Engage reluctant students",
+    title: "Respond to eye rolls without creating a battle",
     description:
-      "Support teenagers who feel self-conscious, unsure or worried about looking silly.",
+      "Keep the session moving without lecturing students, demanding enthusiasm or turning reluctance into a confrontation.",
     tone: "green",
   },
   {
     number: "03",
-    title: "Avoid forced sharing",
+    title: "Reduce the fear of looking silly",
     description:
-      "Encourage conversation without asking students to reveal personal information.",
+      "Lower the social risk so teenagers can participate without feeling exposed, embarrassed or singled out.",
     tone: "coral",
   },
   {
     number: "04",
-    title: "Include quieter students",
+    title: "Encourage conversation without forced sharing",
     description:
-      "Create participation options that respect confidence, comfort and student choice.",
+      "Create opportunities for connection without asking students to reveal personal information in front of the group.",
     tone: "blue",
   },
   {
     number: "05",
-    title: "Manage a full class",
+    title: "Include quieter students without putting them on the spot",
     description:
-      "Run interactive activities with 25 to 30 students without the room becoming chaotic.",
+      "Offer different ways to participate so confidence can build gradually and students still have a sense of choice.",
     tone: "green",
   },
   {
     number: "06",
-    title: "Build genuine connection",
+    title: "Manage the energy of a full class",
     description:
-      "Use shared interests and simple conversations to help students find common ground.",
+      "Use clear timing, team structures and instructions to keep activities active, purposeful and manageable.",
     tone: "yellow",
   },
 ];
 
 const toolFeatures = [
-  "Create five or six student teams",
-  "Run timed whole-class connection activities",
+  "Set up five or six student teams",
+  "Run short timed connection activities",
   "Facilitate Two Truths and a Dream",
   "Complete achievable six-minute team challenges",
-  "Record team points and class progress",
-  "Finish with a guided class reflection",
+  "Track team points and class progress",
+  "Finish with reflection without creating an awkward sharing circle",
 ];
 
 const marqueeWords = [
-  "REAL CLASSROOMS",
+  "NO FORCED ICEBREAKERS",
   "REAL TEENAGERS",
-  "PRACTICAL ACTIVITIES",
-  "NO AWKWARD ICEBREAKERS",
+  "REAL CLASSROOMS",
+  "CONNECTION WITHOUT THE CRINGE",
 ];
 
 export const metadata = {
-  title: "Free Teacher Webinar | Operation Reconnect",
+  title: "Team Building for Teens Without the Eye Rolls",
   description:
-    "Join Operation Reconnect for a free live teacher webinar about engaging teenagers in practical team-building activities.",
+    "A free live Operation Reconnect webinar for teachers who want practical team-building activities teenagers are more likely to join.",
 };
 
 export default function WebinarsPage() {
@@ -109,9 +109,20 @@ export default function WebinarsPage() {
               <h1>Team Building for Teens Without the Eye Rolls</h1>
 
               <p className="teacher-webinar-hero-subtitle">
-                Practical ways to help teenagers communicate, participate and
-                connect without making team-building feel childish, awkward or
-                forced.
+                You announce a team-building activity and immediately see the
+                folded arms, awkward silence and sideways looks across the room.
+              </p>
+
+              <p className="teacher-webinar-hero-subtitle">
+                Teenagers often want to connect, but they do not want to be
+                embarrassed, forced to share personal information or asked to
+                participate in activities that feel childish.
+              </p>
+
+              <p className="teacher-webinar-hero-subtitle">
+                This free live webinar will show you how to introduce and run
+                team-building activities that teenagers are far more likely to
+                join.
               </p>
 
               <div className="teacher-webinar-actions">
@@ -133,7 +144,7 @@ export default function WebinarsPage() {
               </div>
 
               <p className="hand-note teacher-webinar-hand-note">
-                free for teachers ↗
+                connection without the cringe ↗
               </p>
             </div>
           </Reveal>
@@ -206,27 +217,37 @@ export default function WebinarsPage() {
                 WHY THIS WEBINAR?
               </span>
 
-              <h2>Team building does not have to feel awkward</h2>
+              <h2>
+                The activity is not always the problem. Sometimes it is how it
+                is introduced.
+              </h2>
             </div>
           </Reveal>
 
           <Reveal delay={100}>
             <div className="teacher-webinar-intro-copy">
               <p>
-                Team-building activities can lose the room quickly when
-                teenagers think they feel childish, embarrassing or forced.
+                A team-building activity can lose a teenage audience within
+                seconds.
               </p>
 
               <p>
-                During this webinar, the Operation Reconnect team will
-                demonstrate practical activities that feel age-appropriate,
-                purposeful and genuinely engaging.
+                Call it an icebreaker, make it feel too childish or ask
+                students to perform in front of the group, and many teenagers
+                will decide they are not participating before you have
+                finished explaining it.
               </p>
 
               <p>
-                You will see how to explain the activities, organise a full
-                class, support reluctant students and keep everyone involved
-                without placing unnecessary pressure on individuals.
+                In this practical webinar, we will explore how to lower that
+                resistance without pressuring students or trying to
+                manufacture enthusiasm.
+              </p>
+
+              <p>
+                You will see how small changes to your language, group
+                structure and activity instructions can make participation
+                feel safer, more natural and less embarrassing.
               </p>
             </div>
           </Reveal>
@@ -241,20 +262,31 @@ export default function WebinarsPage() {
                 </span>
 
                 <h2>
-                  See how the activities work before trying them yourself
+                  Designed for the students who say, “Do we have to?”
                 </h2>
 
                 <p>
-                  This is a practical teacher session. We will walk through the
-                  games step by step and show you how to use them with a class
-                  of 25 to 30 students.
+                  This webinar is not built around a perfectly cooperative
+                  group of students.
+                </p>
+
+                <p>
+                  It is designed for real secondary classrooms where some
+                  teenagers will jump in, some will hang back, some will make
+                  jokes and others will avoid attention completely.
+                </p>
+
+                <p>
+                  We will show you how to organise activities for 25 to 30
+                  students while giving quieter and more reluctant teenagers a
+                  way into the experience.
                 </p>
               </div>
 
               <div className="teacher-webinar-class-size">
                 <span>25–30</span>
                 <strong>students</strong>
-                <small>Full-class activities</small>
+                <small>Real full-class activities</small>
               </div>
             </div>
           </Reveal>
@@ -264,15 +296,17 @@ export default function WebinarsPage() {
           <Reveal>
             <div className="teacher-webinar-centred-heading">
               <span className="teacher-webinar-sticker teacher-webinar-sticker-yellow">
-                DURING THE WEBINAR
+                WHAT TEACHERS WILL LEARN
               </span>
 
               <h2>
-                Learn how to run activities teenagers will actually join
+                Help teenagers participate without forcing the moment
               </h2>
 
               <p>
-                Clear, practical strategies you can use with a secondary class.
+                Practical strategies for reducing resistance, protecting
+                student dignity and helping more teenagers give the activity a
+                go.
               </p>
             </div>
           </Reveal>
@@ -304,16 +338,24 @@ export default function WebinarsPage() {
                   INCLUDED WHEN YOU SIGN UP
                 </span>
 
-                <h2>Interactive Team-Building Classroom Tool</h2>
+                <h2>
+                  A ready-to-use classroom tool that keeps the activity moving
+                </h2>
 
                 <p>
-                  Everyone who signs up will receive access to our interactive
-                  classroom tool during the live webinar.
+                  Everyone who registers will receive access to the interactive
+                  Operation Reconnect classroom tool during the live webinar.
                 </p>
 
                 <p>
-                  Project the tool onto your classroom screen and follow the
-                  teacher instructions to guide students through each activity.
+                  The tool can be projected onto your classroom screen and used
+                  to guide students through each stage of the session.
+                </p>
+
+                <p>
+                  It gives teachers clear instructions, visible timers, team
+                  challenges, scoring and reflection prompts, so you are not
+                  trying to explain everything while also managing the room.
                 </p>
 
                 <a
@@ -350,17 +392,27 @@ export default function WebinarsPage() {
                   WHO IS IT FOR?
                 </span>
 
-                <h2>Teachers working with teenagers</h2>
+                <h2>
+                  For teachers who want connection without the cringe
+                </h2>
 
                 <p>
-                  This webinar is suitable for secondary teachers, specialist
-                  teachers, wellbeing staff, learning support teachers and
-                  other educators supporting teenage students.
+                  This webinar is for secondary teachers, wellbeing staff,
+                  learning support teachers, specialist teachers and educators
+                  who work with teenagers.
                 </p>
 
                 <p>
-                  You do not need previous team-building experience. Everything
-                  will be explained and demonstrated clearly.
+                  It will be particularly useful when students are
+                  disconnected, hesitant to participate, unfamiliar with one
+                  another or quick to dismiss anything that resembles a
+                  traditional icebreaker.
+                </p>
+
+                <p>
+                  You do not need experience running team-building programs.
+                  The activities and classroom setup will be demonstrated step
+                  by step.
                 </p>
               </article>
             </Reveal>
@@ -368,19 +420,22 @@ export default function WebinarsPage() {
             <Reveal delay={100}>
               <article className="teacher-webinar-audience-card teacher-webinar-audience-green">
                 <span className="teacher-webinar-sticker">
-                  MORE TOPICS COMING
+                  THE REAL GOAL
                 </span>
 
-                <h2>More practical teacher webinars are on the way</h2>
+                <h2>
+                  The goal is not to force teenagers to have fun
+                </h2>
 
                 <p>
-                  This is the first webinar in our Operation Reconnect teacher
-                  series.
+                  The goal is to create an experience that feels safe enough,
+                  relevant enough and achievable enough for them to give it a
+                  go.
                 </p>
 
                 <p>
-                  Future sessions will focus on teenage confidence,
-                  communication, participation and meaningful connection.
+                  Connection grows more naturally when students are not being
+                  pressured to perform, overshare or pretend to be enthusiastic.
                 </p>
               </article>
             </Reveal>
@@ -394,11 +449,18 @@ export default function WebinarsPage() {
                 FREE REGISTRATION
               </span>
 
-              <h2>Reserve your place for Thursday 6 August</h2>
+              <h2>
+                Reserve your place for Thursday 6 August
+              </h2>
 
               <p>
-                Join us live from 5:30pm to 6:30pm AEST and leave with practical
-                activities you can use with teenagers in your classroom.
+                Join us live on Thursday 6 August 2026 from 5:30pm to 6:30pm
+                AEST.
+              </p>
+
+              <p>
+                Registration is free, and everyone who signs up will receive
+                access to the interactive classroom tool.
               </p>
 
               <a
