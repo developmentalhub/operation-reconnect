@@ -9,318 +9,417 @@ const webinarDetails = [
   {
     label: "Date",
     value: "Thursday 6 August 2026",
+    tone: "yellow",
   },
   {
     label: "Time",
     value: "5:30pm to 6:30pm AEST",
+    tone: "green",
   },
   {
     label: "Cost",
     value: "Free",
+    tone: "coral",
   },
   {
     label: "Where",
     value: "Live online webinar",
+    tone: "blue",
   },
 ];
 
 const learningPoints = [
-  "Introduce team-building activities without immediately getting eye rolls.",
-  "Engage teenagers who are reluctant or worried about looking silly.",
-  "Encourage conversation without forcing students to share personal information.",
-  "Include quieter students while respecting their comfort and choice.",
-  "Run interactive activities with a class of 25 to 30 students.",
-  "Use shared interests to strengthen classroom connection.",
+  {
+    number: "01",
+    title: "Introduce activities well",
+    description:
+      "Frame team-building in a way that feels relevant and age-appropriate for teenagers.",
+    tone: "yellow",
+  },
+  {
+    number: "02",
+    title: "Engage reluctant students",
+    description:
+      "Support teenagers who feel self-conscious, unsure or worried about looking silly.",
+    tone: "green",
+  },
+  {
+    number: "03",
+    title: "Avoid forced sharing",
+    description:
+      "Encourage conversation without asking students to reveal personal information.",
+    tone: "coral",
+  },
+  {
+    number: "04",
+    title: "Include quieter students",
+    description:
+      "Create participation options that respect confidence, comfort and student choice.",
+    tone: "blue",
+  },
+  {
+    number: "05",
+    title: "Manage a full class",
+    description:
+      "Run interactive activities with 25 to 30 students without the room becoming chaotic.",
+    tone: "green",
+  },
+  {
+    number: "06",
+    title: "Build genuine connection",
+    description:
+      "Use shared interests and simple conversations to help students find common ground.",
+    tone: "yellow",
+  },
 ];
 
 const toolFeatures = [
   "Create five or six student teams",
   "Run timed whole-class connection activities",
   "Facilitate Two Truths and a Dream",
-  "Complete short six-minute interest-circle challenges",
+  "Complete achievable six-minute team challenges",
   "Record team points and class progress",
   "Finish with a guided class reflection",
 ];
 
+const marqueeWords = [
+  "REAL CLASSROOMS",
+  "REAL TEENAGERS",
+  "PRACTICAL ACTIVITIES",
+  "NO AWKWARD ICEBREAKERS",
+];
+
+export const metadata = {
+  title: "Free Teacher Webinar | Operation Reconnect",
+  description:
+    "Join Operation Reconnect for a free live teacher webinar about engaging teenagers in practical team-building activities.",
+};
+
 export default function WebinarsPage() {
   return (
-    <main className="min-h-screen bg-[#f7f4ef] text-[#17212b]">
-      <section className="bg-[#17375f] px-6 py-16 text-white md:py-24">
-        <div className="mx-auto max-w-5xl text-center">
-          <div className="mx-auto inline-flex rounded-full bg-white/15 px-4 py-2 text-sm font-bold uppercase tracking-[0.14em]">
-            Free live teacher webinar
-          </div>
-
-          <h1 className="mx-auto mt-6 max-w-4xl text-4xl font-black leading-tight md:text-6xl">
-            Team Building for Teens Without the Eye Rolls
-          </h1>
-
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-white/90 md:text-xl">
-            A practical live session for teachers who want to help teenagers
-            communicate, participate and connect without making team-building
-            feel childish, awkward or forced.
-          </p>
-
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <a
-              href={registrationLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex min-h-14 items-center justify-center rounded-xl bg-[#f0b44d] px-7 py-4 text-lg font-bold text-[#17212b] transition hover:bg-[#f4c66d]"
-            >
-              Reserve your free spot
-            </a>
-
-            <a
-              href={`mailto:${contactEmail}`}
-              className="inline-flex min-h-14 items-center justify-center rounded-xl border-2 border-white px-7 py-4 text-lg font-bold text-white transition hover:bg-white hover:text-[#17375f]"
-            >
-              Ask us a question
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section className="px-6 py-12 md:py-16">
-        <div className="mx-auto max-w-5xl">
+    <>
+      <section className="teacher-webinar-hero">
+        <div className="teacher-webinar-hero-inner">
           <Reveal>
-            <div className="rounded-3xl border border-[#d7e0e8] bg-white p-6 shadow-sm md:p-10">
-              <div className="text-sm font-bold uppercase tracking-[0.14em] text-[#28559a]">
-                Upcoming live session
+            <div className="teacher-webinar-hero-copy">
+              <div className="webinar-badge">
+                FREE LIVE TEACHER WEBINAR
               </div>
 
-              <h2 className="mt-3 text-3xl font-black md:text-4xl">
-                Team Building for Teens
-              </h2>
+              <h1>Team Building for Teens Without the Eye Rolls</h1>
 
-              <p className="mt-5 max-w-4xl text-lg leading-8 text-[#4b5965]">
-                Team-building activities can quickly feel awkward or forced for
-                teenagers. During this webinar, the Operation Reconnect team
-                will demonstrate activities that feel age-appropriate,
-                purposeful and genuinely engaging.
+              <p className="teacher-webinar-hero-subtitle">
+                Practical ways to help teenagers communicate, participate and
+                connect without making team-building feel childish, awkward or
+                forced.
               </p>
 
-              <p className="mt-4 max-w-4xl text-lg leading-8 text-[#4b5965]">
-                You will see how to explain the activities, organise a full
-                class, support reluctant students and keep everyone involved
-                without placing unnecessary pressure on individuals.
-              </p>
-
-              <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                {webinarDetails.map((detail) => (
-                  <div
-                    key={detail.label}
-                    className="rounded-2xl bg-[#eef3f8] p-5"
-                  >
-                    <div className="text-sm font-bold uppercase tracking-wide text-[#5b6874]">
-                      {detail.label}
-                    </div>
-
-                    <div className="mt-2 text-lg font-black text-[#17375f]">
-                      {detail.value}
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-8">
+              <div className="teacher-webinar-actions">
                 <a
                   href={registrationLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex min-h-14 items-center justify-center rounded-xl bg-[#28559a] px-7 py-4 text-lg font-bold text-white transition hover:bg-[#1f477f]"
+                  className="register-button"
                 >
                   Reserve your free spot
                 </a>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
 
-      <section className="bg-white px-6 py-14 md:py-20">
-        <div className="mx-auto max-w-5xl">
-          <Reveal>
-            <div className="max-w-3xl">
-              <div className="text-sm font-bold uppercase tracking-[0.14em] text-[#4f8b52]">
-                During the webinar
+                <a
+                  href={`mailto:${contactEmail}`}
+                  className="teacher-webinar-secondary-button"
+                >
+                  Ask us a question
+                </a>
               </div>
 
-              <h2 className="mt-3 text-3xl font-black leading-tight md:text-4xl">
-                Learn how to run activities teenagers will actually join
-              </h2>
-
-              <p className="mt-5 text-lg leading-8 text-[#4b5965]">
-                This is a practical teacher session. We will walk through the
-                activities step by step and show you how to use them with a
-                class of 25 to 30 students.
+              <p className="hand-note teacher-webinar-hand-note">
+                free for teachers ↗
               </p>
             </div>
           </Reveal>
 
-          <div className="mt-10 grid gap-4 md:grid-cols-2">
-            {learningPoints.map((point, index) => (
-              <Reveal key={point} delay={index * 70}>
-                <div className="flex h-full gap-4 rounded-2xl border border-[#dfe5e8] bg-[#fafafa] p-5">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#17375f] font-black text-white">
-                    {index + 1}
-                  </div>
+          <Reveal delay={120}>
+            <div className="teacher-webinar-date-card">
+              <span className="teacher-webinar-date-label">
+                Save the date
+              </span>
 
-                  <p className="text-lg leading-7 text-[#34414c]">{point}</p>
-                </div>
+              <strong>Thursday</strong>
+
+              <div className="teacher-webinar-date-number">6</div>
+
+              <strong>August 2026</strong>
+
+              <div className="teacher-webinar-date-divider" />
+
+              <p>5:30pm to 6:30pm</p>
+              <p>AEST</p>
+              <p>Live online</p>
+
+              <span className="teacher-webinar-free-sticker">
+                FREE
+              </span>
+            </div>
+          </Reveal>
+        </div>
+
+        <svg
+          className="cloud-divider"
+          viewBox="0 0 1440 120"
+          preserveAspectRatio="none"
+        >
+          <path d="M0,64 C240,120 480,0 720,48 C960,96 1200,32 1440,64 L1440,120 L0,120 Z" />
+        </svg>
+      </section>
+
+      <div className="marquee">
+        <div className="marquee-track">
+          {[...marqueeWords, ...marqueeWords].map((word, index) => (
+            <span className="marquee-item" key={`${word}-${index}`}>
+              {word}
+              <span className="marquee-dot">●</span>
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <main className="teacher-webinar-main">
+        <section className="teacher-webinar-details">
+          <div className="teacher-webinar-details-grid">
+            {webinarDetails.map((detail, index) => (
+              <Reveal key={detail.label} delay={index * 80}>
+                <article
+                  className={`teacher-webinar-detail-card teacher-detail-${detail.tone}`}
+                >
+                  <span>{detail.label}</span>
+                  <strong>{detail.value}</strong>
+                </article>
               </Reveal>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="px-6 py-14 md:py-20">
-        <div className="mx-auto max-w-5xl">
+        <section className="teacher-webinar-intro">
           <Reveal>
-            <div className="rounded-3xl bg-[#e8f1e7] p-6 md:p-10">
-              <div className="text-sm font-bold uppercase tracking-[0.14em] text-[#3e7442]">
-                Included for everyone who signs up
-              </div>
+            <div className="teacher-webinar-intro-heading">
+              <span className="teacher-webinar-sticker">
+                WHY THIS WEBINAR?
+              </span>
 
-              <div className="mt-4 grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
-                <div>
-                  <h2 className="text-3xl font-black leading-tight md:text-4xl">
-                    Interactive Team-Building Classroom Tool
-                  </h2>
-
-                  <p className="mt-5 text-lg leading-8 text-[#425249]">
-                    Everyone who signs up will receive access to our interactive
-                    Netlify classroom tool during the live webinar.
-                  </p>
-
-                  <p className="mt-4 text-lg leading-8 text-[#425249]">
-                    The tool can be projected onto the classroom screen and
-                    guides the teacher through each activity.
-                  </p>
-                </div>
-
-                <div className="rounded-2xl bg-white p-6">
-                  <h3 className="text-xl font-black text-[#17375f]">
-                    The tool includes:
-                  </h3>
-
-                  <ul className="mt-5 space-y-3">
-                    {toolFeatures.map((feature) => (
-                      <li
-                        key={feature}
-                        className="flex gap-3 text-base leading-7 text-[#34414c]"
-                      >
-                        <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-[#4f8b52]" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              <div className="mt-8">
-                <a
-                  href={registrationLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex min-h-14 items-center justify-center rounded-xl bg-[#4f8b52] px-7 py-4 text-lg font-bold text-white transition hover:bg-[#3e7442]"
-                >
-                  Sign up and receive the classroom tool
-                </a>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      <section className="bg-white px-6 py-14 md:py-20">
-        <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
-          <Reveal>
-            <div className="h-full rounded-3xl border border-[#dfe5e8] p-6 md:p-8">
-              <div className="text-sm font-bold uppercase tracking-[0.14em] text-[#28559a]">
-                Who this is for
-              </div>
-
-              <h2 className="mt-3 text-2xl font-black md:text-3xl">
-                Teachers working with teenagers
-              </h2>
-
-              <p className="mt-5 text-lg leading-8 text-[#4b5965]">
-                This webinar is suitable for secondary teachers, specialist
-                teachers, wellbeing staff, learning support teachers and other
-                educators supporting teenage students.
-              </p>
-
-              <p className="mt-4 text-lg leading-8 text-[#4b5965]">
-                You do not need previous team-building experience. Everything
-                will be explained and demonstrated clearly.
-              </p>
+              <h2>Team building does not have to feel awkward</h2>
             </div>
           </Reveal>
 
           <Reveal delay={100}>
-            <div className="h-full rounded-3xl border border-[#dfe5e8] p-6 md:p-8">
-              <div className="text-sm font-bold uppercase tracking-[0.14em] text-[#4f8b52]">
-                More topics coming soon
-              </div>
-
-              <h2 className="mt-3 text-2xl font-black md:text-3xl">
-                More practical teacher webinars are coming
-              </h2>
-
-              <p className="mt-5 text-lg leading-8 text-[#4b5965]">
-                This is the first webinar in our Operation Reconnect teacher
-                series.
+            <div className="teacher-webinar-intro-copy">
+              <p>
+                Team-building activities can lose the room quickly when
+                teenagers think they feel childish, embarrassing or forced.
               </p>
 
-              <p className="mt-4 text-lg leading-8 text-[#4b5965]">
-                Future sessions will focus on teenage confidence,
-                communication, participation and meaningful connection.
+              <p>
+                During this webinar, the Operation Reconnect team will
+                demonstrate practical activities that feel age-appropriate,
+                purposeful and genuinely engaging.
+              </p>
+
+              <p>
+                You will see how to explain the activities, organise a full
+                class, support reluctant students and keep everyone involved
+                without placing unnecessary pressure on individuals.
               </p>
             </div>
           </Reveal>
-        </div>
-      </section>
+        </section>
 
-      <section className="bg-[#17375f] px-6 py-14 text-white md:py-20">
-        <Reveal>
-          <div className="mx-auto max-w-4xl text-center">
-            <div className="text-sm font-bold uppercase tracking-[0.14em] text-[#f0b44d]">
-              Free registration
+        <section className="teacher-webinar-classroom-banner">
+          <Reveal>
+            <div className="teacher-webinar-classroom-inner">
+              <div className="teacher-webinar-classroom-copy">
+                <span className="teacher-webinar-sticker teacher-webinar-sticker-yellow">
+                  DESIGNED FOR REAL CLASSROOMS
+                </span>
+
+                <h2>
+                  See how the activities work before trying them yourself
+                </h2>
+
+                <p>
+                  This is a practical teacher session. We will walk through the
+                  games step by step and show you how to use them with a class
+                  of 25 to 30 students.
+                </p>
+              </div>
+
+              <div className="teacher-webinar-class-size">
+                <span>25–30</span>
+                <strong>students</strong>
+                <small>Full-class activities</small>
+              </div>
             </div>
+          </Reveal>
+        </section>
 
-            <h2 className="mt-4 text-3xl font-black leading-tight md:text-5xl">
-              Reserve your place for Thursday 6 August
-            </h2>
+        <section className="teacher-webinar-learning-section">
+          <Reveal>
+            <div className="teacher-webinar-centred-heading">
+              <span className="teacher-webinar-sticker teacher-webinar-sticker-yellow">
+                DURING THE WEBINAR
+              </span>
 
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-white/90">
-              Join us live from 5:30pm to 6:30pm AEST and leave with practical
-              activities you can use with teenagers in your classroom.
-            </p>
+              <h2>
+                Learn how to run activities teenagers will actually join
+              </h2>
 
-            <div className="mt-8">
+              <p>
+                Clear, practical strategies you can use with a secondary class.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="teacher-webinar-learning-grid">
+            {learningPoints.map((point, index) => (
+              <Reveal key={point.number} delay={index * 70}>
+                <article
+                  className={`teacher-webinar-learning-card teacher-learning-${point.tone}`}
+                >
+                  <span className="teacher-webinar-learning-number">
+                    {point.number}
+                  </span>
+
+                  <h3>{point.title}</h3>
+
+                  <p>{point.description}</p>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+
+        <section className="teacher-webinar-tool-section">
+          <Reveal>
+            <div className="teacher-webinar-tool-card">
+              <div className="teacher-webinar-tool-copy">
+                <span className="teacher-webinar-sticker">
+                  INCLUDED WHEN YOU SIGN UP
+                </span>
+
+                <h2>Interactive Team-Building Classroom Tool</h2>
+
+                <p>
+                  Everyone who signs up will receive access to our interactive
+                  classroom tool during the live webinar.
+                </p>
+
+                <p>
+                  Project the tool onto your classroom screen and follow the
+                  teacher instructions to guide students through each activity.
+                </p>
+
+                <a
+                  href={registrationLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="register-button"
+                >
+                  Sign up and receive the tool
+                </a>
+              </div>
+
+              <div className="teacher-webinar-tool-list">
+                <h3>The classroom tool includes:</h3>
+
+                <ul>
+                  {toolFeatures.map((feature) => (
+                    <li key={feature}>
+                      <span>✓</span>
+                      <p>{feature}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </Reveal>
+        </section>
+
+        <section className="teacher-webinar-audience-section">
+          <div className="teacher-webinar-audience-grid">
+            <Reveal>
+              <article className="teacher-webinar-audience-card teacher-webinar-audience-blue">
+                <span className="teacher-webinar-sticker">
+                  WHO IS IT FOR?
+                </span>
+
+                <h2>Teachers working with teenagers</h2>
+
+                <p>
+                  This webinar is suitable for secondary teachers, specialist
+                  teachers, wellbeing staff, learning support teachers and
+                  other educators supporting teenage students.
+                </p>
+
+                <p>
+                  You do not need previous team-building experience. Everything
+                  will be explained and demonstrated clearly.
+                </p>
+              </article>
+            </Reveal>
+
+            <Reveal delay={100}>
+              <article className="teacher-webinar-audience-card teacher-webinar-audience-green">
+                <span className="teacher-webinar-sticker">
+                  MORE TOPICS COMING
+                </span>
+
+                <h2>More practical teacher webinars are on the way</h2>
+
+                <p>
+                  This is the first webinar in our Operation Reconnect teacher
+                  series.
+                </p>
+
+                <p>
+                  Future sessions will focus on teenage confidence,
+                  communication, participation and meaningful connection.
+                </p>
+              </article>
+            </Reveal>
+          </div>
+        </section>
+
+        <section className="teacher-webinar-final-section">
+          <Reveal>
+            <div className="teacher-webinar-final-card">
+              <span className="teacher-webinar-sticker teacher-webinar-sticker-yellow">
+                FREE REGISTRATION
+              </span>
+
+              <h2>Reserve your place for Thursday 6 August</h2>
+
+              <p>
+                Join us live from 5:30pm to 6:30pm AEST and leave with practical
+                activities you can use with teenagers in your classroom.
+              </p>
+
               <a
                 href={registrationLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-14 items-center justify-center rounded-xl bg-[#f0b44d] px-8 py-4 text-lg font-bold text-[#17212b] transition hover:bg-[#f4c66d]"
+                className="register-button"
               >
                 Reserve your free spot
               </a>
-            </div>
 
-            <p className="mt-6 text-base text-white/85">
-              Need help registering?{" "}
-              <a
-                href={`mailto:${contactEmail}`}
-                className="font-bold text-white underline underline-offset-4"
-              >
-                {contactEmail}
-              </a>
-            </p>
-          </div>
-        </Reveal>
-      </section>
-    </main>
+              <p className="teacher-webinar-contact">
+                Need help registering?{" "}
+                <a href={`mailto:${contactEmail}`}>
+                  {contactEmail}
+                </a>
+              </p>
+            </div>
+          </Reveal>
+        </section>
+      </main>
+    </>
   );
 }
