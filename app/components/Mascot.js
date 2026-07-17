@@ -39,3 +39,4 @@ export default function Mascot({ src }) {
     </div>
   );
 }
+
