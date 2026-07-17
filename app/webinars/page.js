@@ -23,7 +23,7 @@ const webinarDetails = [
   },
   {
     label: "Where",
-    value: "Live online webinar",
+    value: "Live online",
     tone: "blue",
   },
 ];
@@ -33,14 +33,14 @@ const learningPoints = [
     number: "01",
     title: "Introduce activities without instant resistance",
     description:
-      "Learn how to explain the purpose without making the activity sound childish, awkward or like another forced icebreaker.",
+      "Explain the purpose without making the activity sound childish, awkward or like another forced icebreaker.",
     tone: "yellow",
   },
   {
     number: "02",
     title: "Respond to eye rolls without creating a battle",
     description:
-      "Keep the session moving without lecturing students, demanding enthusiasm or turning reluctance into a confrontation.",
+      "Keep the session moving without lecturing students, demanding enthusiasm or turning reluctance into confrontation.",
     tone: "green",
   },
   {
@@ -59,7 +59,7 @@ const learningPoints = [
   },
   {
     number: "05",
-    title: "Include quieter students without putting them on the spot",
+    title: "Include quieter students",
     description:
       "Offer different ways to participate so confidence can build gradually and students still have a sense of choice.",
     tone: "green",
@@ -82,13 +82,6 @@ const toolFeatures = [
   "Finish with reflection without creating an awkward sharing circle",
 ];
 
-const marqueeWords = [
-  "NO FORCED ICEBREAKERS",
-  "REAL TEENAGERS",
-  "REAL CLASSROOMS",
-  "CONNECTION WITHOUT THE CRINGE",
-];
-
 export const metadata = {
   title: "Team Building for Teens Without the Eye Rolls",
   description:
@@ -102,25 +95,20 @@ export default function WebinarsPage() {
         <div className="teacher-webinar-hero-inner">
           <Reveal>
             <div className="teacher-webinar-hero-copy">
-              <div className="webinar-badge">
-                FREE LIVE TEACHER WEBINAR
-              </div>
+              <span className="webinar-badge">
+                Free live teacher webinar
+              </span>
 
               <h1>Team Building for Teens Without the Eye Rolls</h1>
 
               <p className="teacher-webinar-hero-subtitle">
-                You announce a team-building activity and immediately see the
-                folded arms, awkward silence and sideways looks across the room.
-              </p>
-
-              <p className="teacher-webinar-hero-subtitle">
                 Teenagers often want to connect, but they do not want to be
                 embarrassed, forced to share personal information or asked to
-                participate in activities that feel childish.
+                join activities that feel childish.
               </p>
 
               <p className="teacher-webinar-hero-subtitle">
-                This free live webinar will show you how to introduce and run
+                This practical webinar will show you how to introduce and run
                 team-building activities that teenagers are far more likely to
                 join.
               </p>
@@ -142,15 +130,11 @@ export default function WebinarsPage() {
                   Ask us a question
                 </a>
               </div>
-
-              <p className="hand-note teacher-webinar-hand-note">
-                connection without the cringe ↗
-              </p>
             </div>
           </Reveal>
 
           <Reveal delay={120}>
-            <div className="teacher-webinar-date-card">
+            <aside className="teacher-webinar-date-card">
               <span className="teacher-webinar-date-label">
                 Save the date
               </span>
@@ -163,14 +147,13 @@ export default function WebinarsPage() {
 
               <div className="teacher-webinar-date-divider" />
 
-              <p>5:30pm to 6:30pm</p>
-              <p>AEST</p>
+              <p>5:30pm to 6:30pm AEST</p>
               <p>Live online</p>
 
               <span className="teacher-webinar-free-sticker">
                 FREE
               </span>
-            </div>
+            </aside>
           </Reveal>
         </div>
 
@@ -178,27 +161,17 @@ export default function WebinarsPage() {
           className="cloud-divider"
           viewBox="0 0 1440 120"
           preserveAspectRatio="none"
+          aria-hidden="true"
         >
           <path d="M0,64 C240,120 480,0 720,48 C960,96 1200,32 1440,64 L1440,120 L0,120 Z" />
         </svg>
       </section>
 
-      <div className="marquee">
-        <div className="marquee-track">
-          {[...marqueeWords, ...marqueeWords].map((word, index) => (
-            <span className="marquee-item" key={`${word}-${index}`}>
-              {word}
-              <span className="marquee-dot">●</span>
-            </span>
-          ))}
-        </div>
-      </div>
-
       <main className="teacher-webinar-main">
         <section className="teacher-webinar-details">
           <div className="teacher-webinar-details-grid">
             {webinarDetails.map((detail, index) => (
-              <Reveal key={detail.label} delay={index * 80}>
+              <Reveal key={detail.label} delay={index * 70}>
                 <article
                   className={`teacher-webinar-detail-card teacher-detail-${detail.tone}`}
                 >
@@ -214,7 +187,7 @@ export default function WebinarsPage() {
           <Reveal>
             <div className="teacher-webinar-intro-heading">
               <span className="teacher-webinar-sticker">
-                WHY THIS WEBINAR?
+                Why this webinar?
               </span>
 
               <h2>
@@ -239,9 +212,9 @@ export default function WebinarsPage() {
               </p>
 
               <p>
-                In this practical webinar, we will explore how to lower that
-                resistance without pressuring students or trying to
-                manufacture enthusiasm.
+                In this webinar, we will explore how to lower that resistance
+                without pressuring students or trying to manufacture
+                enthusiasm.
               </p>
 
               <p>
@@ -253,41 +226,37 @@ export default function WebinarsPage() {
           </Reveal>
         </section>
 
-        <section className="teacher-webinar-classroom-banner">
+        <section className="teacher-webinar-real-classrooms">
           <Reveal>
-            <div className="teacher-webinar-classroom-inner">
-              <div className="teacher-webinar-classroom-copy">
-                <span className="teacher-webinar-sticker teacher-webinar-sticker-yellow">
-                  DESIGNED FOR REAL CLASSROOMS
-                </span>
+            <div className="teacher-webinar-real-classrooms-copy">
+              <span className="teacher-webinar-sticker teacher-webinar-sticker-yellow">
+                Designed for real classrooms
+              </span>
 
-                <h2>
-                  Designed for the students who say, “Do we have to?”
-                </h2>
+              <h2>For the students who ask, “Do we have to?”</h2>
 
-                <p>
-                  This webinar is not built around a perfectly cooperative
-                  group of students.
-                </p>
+              <p>
+                This webinar is not built around a perfectly cooperative group
+                of students.
+              </p>
 
-                <p>
-                  It is designed for real secondary classrooms where some
-                  teenagers will jump in, some will hang back, some will make
-                  jokes and others will avoid attention completely.
-                </p>
+              <p>
+                It is designed for real secondary classrooms where some
+                teenagers will jump in, some will hang back, some will make
+                jokes and others will avoid attention completely.
+              </p>
 
-                <p>
-                  We will show you how to organise activities for 25 to 30
-                  students while giving quieter and more reluctant teenagers a
-                  way into the experience.
-                </p>
-              </div>
+              <p>
+                We will show you how to organise activities for a full class
+                while giving quieter and more reluctant teenagers a way into
+                the experience.
+              </p>
+            </div>
 
-              <div className="teacher-webinar-class-size">
-                <span>25–30</span>
-                <strong>students</strong>
-                <small>Real full-class activities</small>
-              </div>
+            <div className="teacher-webinar-class-size">
+              <span>25–30</span>
+              <strong>students</strong>
+              <small>Practical full-class activities</small>
             </div>
           </Reveal>
         </section>
@@ -295,8 +264,8 @@ export default function WebinarsPage() {
         <section className="teacher-webinar-learning-section">
           <Reveal>
             <div className="teacher-webinar-centred-heading">
-              <span className="teacher-webinar-sticker teacher-webinar-sticker-yellow">
-                WHAT TEACHERS WILL LEARN
+              <span className="teacher-webinar-sticker">
+                What teachers will learn
               </span>
 
               <h2>
@@ -334,8 +303,8 @@ export default function WebinarsPage() {
           <Reveal>
             <div className="teacher-webinar-tool-card">
               <div className="teacher-webinar-tool-copy">
-                <span className="teacher-webinar-sticker">
-                  INCLUDED WHEN YOU SIGN UP
+                <span className="teacher-webinar-sticker teacher-webinar-sticker-yellow">
+                  Included when you register
                 </span>
 
                 <h2>
@@ -348,12 +317,12 @@ export default function WebinarsPage() {
                 </p>
 
                 <p>
-                  The tool can be projected onto your classroom screen and used
-                  to guide students through each stage of the session.
+                  Project the tool onto your classroom screen and use it to
+                  guide students through each stage of the session.
                 </p>
 
                 <p>
-                  It gives teachers clear instructions, visible timers, team
+                  It includes clear teacher instructions, visible timers, team
                   challenges, scoring and reflection prompts, so you are not
                   trying to explain everything while also managing the room.
                 </p>
@@ -374,7 +343,7 @@ export default function WebinarsPage() {
                 <ul>
                   {toolFeatures.map((feature) => (
                     <li key={feature}>
-                      <span>✓</span>
+                      <span aria-hidden="true">✓</span>
                       <p>{feature}</p>
                     </li>
                   ))}
@@ -389,11 +358,11 @@ export default function WebinarsPage() {
             <Reveal>
               <article className="teacher-webinar-audience-card teacher-webinar-audience-blue">
                 <span className="teacher-webinar-sticker">
-                  WHO IS IT FOR?
+                  Who is it for?
                 </span>
 
                 <h2>
-                  For teachers who want connection without the cringe
+                  Teachers who want connection without the cringe
                 </h2>
 
                 <p>
@@ -410,9 +379,9 @@ export default function WebinarsPage() {
                 </p>
 
                 <p>
-                  You do not need experience running team-building programs.
-                  The activities and classroom setup will be demonstrated step
-                  by step.
+                  You do not need previous experience running team-building
+                  programs. The activities and classroom setup will be
+                  demonstrated step by step.
                 </p>
               </article>
             </Reveal>
@@ -420,7 +389,7 @@ export default function WebinarsPage() {
             <Reveal delay={100}>
               <article className="teacher-webinar-audience-card teacher-webinar-audience-green">
                 <span className="teacher-webinar-sticker">
-                  THE REAL GOAL
+                  The real goal
                 </span>
 
                 <h2>
@@ -435,7 +404,8 @@ export default function WebinarsPage() {
 
                 <p>
                   Connection grows more naturally when students are not being
-                  pressured to perform, overshare or pretend to be enthusiastic.
+                  pressured to perform, overshare or pretend to be
+                  enthusiastic.
                 </p>
               </article>
             </Reveal>
@@ -446,12 +416,10 @@ export default function WebinarsPage() {
           <Reveal>
             <div className="teacher-webinar-final-card">
               <span className="teacher-webinar-sticker teacher-webinar-sticker-yellow">
-                FREE REGISTRATION
+                Free registration
               </span>
 
-              <h2>
-                Reserve your place for Thursday 6 August
-              </h2>
+              <h2>Reserve your place for Thursday 6 August</h2>
 
               <p>
                 Join us live on Thursday 6 August 2026 from 5:30pm to 6:30pm
