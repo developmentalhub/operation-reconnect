@@ -1,6 +1,6 @@
 import styles from '../webinars.module.css';
-import Reveal from '../../../components/Reveal';
-import EventCalendar from '../../../components/EventCalendar';
+import Reveal from '../../components/Reveal';
+import EventCalendar from '../../components/EventCalendar';
 
 const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSda-3B0JM14IaHojgZpRm00UeWMJ2sJQ8-kCY8nsHGNgOQbOQ/viewform?usp=sharing&ouid=112800969583636718113';
 
