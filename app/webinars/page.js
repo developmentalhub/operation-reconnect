@@ -1,81 +1,190 @@
+// app/webinars/page.tsx
+
 import Reveal from '../components/Reveal';
-import EventCalendar from '../components/EventCalendar';
+import WebinarSignupForm from '../components/WebinarSignupForm';
+
+export const metadata = {
+  title: 'Teacher Reconnect Live — Operation Reconnect',
+  description:
+    'Free 30-minute live sessions for teachers with practical ideas to help students build conversation skills, friendships, confidence and real-world connection.',
+};
 
 export default function TeacherWebinarPage() {
   return (
     <main>
       <section className="webinar-hero">
-        <div className="webinar-badge">🎤 TEACHER RECONNECT LIVE</div>
-        <h1>Your Students Want to Connect. Let's Help Them Get There.</h1>
+        <div className="webinar-badge">
+          TEACHER RECONNECT LIVE
+        </div>
+
+        <h1>
+          Help Students Build Real Connection,
+          One Conversation at a Time.
+        </h1>
+
         <p className="webinar-subtitle">
-          Free live sessions for teachers, run by the founder of Operation Reconnect — a teen-led project helping students build real friendships and confidence.
+          Free 30-minute live sessions for teachers with practical ways
+          to help students start conversations, build friendships and
+          feel more confident connecting face-to-face.
         </p>
+
         <div className="weekly-schedule">
-          <div>Thursdays · 5:00–5:30 PM AEST</div>
-          <div>Saturdays · 10:00–10:30 AM AEST</div>
-          <div>Free to attend</div>
+          <div>Starts 1 October</div>
+          <div>30 minutes</div>
+          <div>Live online</div>
+          <div>Free for teachers</div>
         </div>
       </section>
 
       <Reveal>
-        <section className="mission-section">
-          <h2>Why This Exists</h2>
-          <p>
-            Operation Reconnect started because making friends has gotten harder for teens — not because they don't want connection, but because so much of modern life makes it awkward, easy to avoid, and easy to fake with a like or a text.
-          </p>
-          <p>
-            You see it every day in your classroom: the student who eats lunch alone, the group project nobody wants to lead, the kid who's funny in a group chat but goes quiet in real life. Teachers are often the first to notice — but rarely handed the tools to actually do something about it.
-          </p>
-          <p>
-            Teacher Reconnect Live is that tool. Thirty-minute live sessions built from the student's side of the problem — practical enough to use tomorrow, and grounded in what's actually going on for the kids in front of you.
-          </p>
-        </section>
-      </Reveal>
+        <section className="teacher-value-section">
+          <div className="teacher-value-grid">
+            <div className="teacher-value-card tone-coral">
+              <span className="teacher-value-number">
+                01
+              </span>
 
-      <Reveal>
-        <section className="dates-section">
-          <h2>Upcoming Dates</h2>
-          <EventCalendar />
-        </section>
-      </Reveal>
+              <h3>Use It Tomorrow</h3>
 
-      <Reveal>
-        <section className="booking-section">
-          <div className="register-card">
-            <h2>Join Teacher Reconnect Live</h2>
-            <p>
-              Each session tackles one real, specific challenge — starting conversations, building confidence, turning acquaintances into actual friends — and leaves you with something you can try in class the very next day.
-            </p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSda-3B0JM14IaHojgZpRm00UeWMJ2sJQ8-kCY8nsHGNgOQbOQ/viewform?usp=sharing&ouid=112800969583636718113" target="_blank" rel="noopener noreferrer" className="register-button">Reserve Your Spot</a>
+              <p>
+                Leave with a practical conversation or connection
+                activity you can use with students straight away.
+              </p>
+            </div>
+
+            <div className="teacher-value-card tone-blue">
+              <span className="teacher-value-number">
+                02
+              </span>
+
+              <h3>The Student Perspective</h3>
+
+              <p>
+                Hear what awkward conversations, friendship and
+                connection can actually feel like from a young
+                person's perspective.
+              </p>
+            </div>
+
+            <div className="teacher-value-card tone-yellow">
+              <span className="teacher-value-number">
+                03
+              </span>
+
+              <h3>Short and Useful</h3>
+
+              <p>
+                Thirty focused minutes without another long training
+                session taking over your week.
+              </p>
+            </div>
           </div>
         </section>
       </Reveal>
 
-      <section className="perks-section">
-        <h2>What You'll Walk Away With</h2>
-        <div className="perk-row">
-          <Reveal>
-            <div className="perk-badge tone-coral">
-              <h3>Practical Ideas</h3>
-              <p>Activities and strategies you can use with students straight away — no extra planning time required.</p>
-            </div>
-          </Reveal>
+      <Reveal>
+        <section
+          className="webinar-signup-section"
+          id="teacher-signup"
+        >
+          <div className="webinar-signup-intro">
+            <p className="small-heading">
+              LIVE SESSIONS BEGIN 1 OCTOBER
+            </p>
 
-          <Reveal delay={100}>
-            <div className="perk-badge tone-blue">
-              <h3>Better Connections</h3>
-              <p>Simple ways to build a classroom where students actually feel like they belong.</p>
-            </div>
-          </Reveal>
+            <h2>
+              Choose Your Free Session
+            </h2>
 
-          <Reveal delay={200}>
-            <div className="perk-badge tone-yellow">
-              <h3>Real Solutions</h3>
-              <p>Tools grounded in what students are actually experiencing, not outdated theory.</p>
+            <p>
+              Choose one of the upcoming live sessions below,
+              enter your details and we'll send your booking
+              confirmation directly to your inbox.
+            </p>
+          </div>
+
+          <WebinarSignupForm />
+        </section>
+      </Reveal>
+
+      <Reveal>
+        <section className="mission-section">
+          <h2>
+            Why Teacher Reconnect Exists
+          </h2>
+
+          <p>
+            Making friends can feel harder for young people than it
+            used to. Not because they do not want connection, but
+            because so much communication can now happen without
+            having to practise the uncomfortable parts of connecting
+            face-to-face.
+          </p>
+
+          <p>
+            Teachers often see those moments first. The student who
+            sits alone at lunch. The teenager who can be confident
+            online but struggles to start a conversation in person.
+            The group of students standing beside each other while
+            everyone looks at their phones.
+          </p>
+
+          <p>
+            Teacher Reconnect Live gives educators simple ways to
+            create more opportunities for conversation, confidence
+            and connection during an ordinary school day.
+          </p>
+        </section>
+      </Reveal>
+
+      <Reveal>
+        <section className="topic-section">
+          <h2>
+            What We Talk About
+          </h2>
+
+          <div className="topic-list">
+            <div className="topic-card">
+              Starting a conversation when you do not know what to say
             </div>
-          </Reveal>
-        </div>
-      </section>
+
+            <div className="topic-card">
+              Helping students move from acquaintances to friendships
+            </div>
+
+            <div className="topic-card">
+              Building confidence through small social challenges
+            </div>
+
+            <div className="topic-card">
+              Making face-to-face conversation feel less awkward
+            </div>
+
+            <div className="topic-card">
+              Creating simple connection opportunities in classrooms
+            </div>
+          </div>
+        </section>
+      </Reveal>
+
+      <Reveal>
+        <section className="teacher-bottom-cta">
+          <h2>
+            Connection Gets Better With Practice.
+          </h2>
+
+          <p>
+            Give students more chances to practise it.
+          </p>
+
+          <a
+            href="#teacher-signup"
+            className="register-button"
+          >
+            Choose a Free Session
+          </a>
+        </section>
+      </Reveal>
     </main>
   );
 }

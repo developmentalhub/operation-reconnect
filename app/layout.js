@@ -20,8 +20,25 @@ const hand = Kalam({
 });
 
 export const metadata = {
-  title: 'Operation Reconnect',
-  description: 'Helping teens make friends, build confidence, and understand how communities work.',
+  metadataBase: new URL('https://operationreconnect.com'),
+  title: {
+    default: 'Operation Reconnect',
+    template: '%s | Operation Reconnect',
+  },
+  description: 'Operation Reconnect helps teens make friends, build confidence, and understand how communities work through a podcast, videos, webinars, and challenges.',
+  keywords: ['teen friendship', 'social skills for teens', 'making friends', 'confidence building', 'teen mental health', 'connection', 'Operation Reconnect'],
+  openGraph: {
+    title: 'Operation Reconnect',
+    description: 'Helping teens make friends, build confidence, and understand how communities work.',
+    url: 'https://operationreconnect.com',
+    siteName: 'Operation Reconnect',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Operation Reconnect',
+    description: 'Helping teens make friends, build confidence, and understand how communities work.',
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -34,6 +51,7 @@ export default function RootLayout({ children }) {
             <Link href="/podcast">Podcast</Link>
             <Link href="/videos">Videos</Link>
             <Link href="/webinars">Webinars</Link>
+            <Link href="/blog">Blog</Link>
             <Link href="/subscribe" className="nav-cta">Subscribe</Link>
           </nav>
         </header>
