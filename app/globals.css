@@ -2385,3 +2385,283 @@ main {
     box-shadow: 5px 5px 0 var(--text);
   }
 }
+
+/* =========================================================
+   CONNECTION BENCHES
+   ========================================================= */
+
+.connection-bench-hero {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 80px 0 50px;
+  text-align: center;
+}
+
+.connection-bench-hero h1 {
+  font-size: clamp(3rem, 8vw, 5rem);
+  line-height: 0.98;
+  margin-bottom: 24px;
+}
+
+.connection-bench-lead {
+  max-width: 620px;
+  margin: 0 auto 16px;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.connection-bench-intro {
+  max-width: 620px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+
+/* ---------- Counter ---------- */
+
+.connection-counter-section {
+  max-width: 700px;
+  margin: 0 auto 80px;
+  padding: 48px 30px;
+
+  background: var(--yellow);
+
+  border: 4px solid var(--text);
+  border-radius: 26px;
+  box-shadow: 8px 8px 0 var(--text);
+
+  text-align: center;
+}
+
+.connection-count {
+  margin: 8px 0;
+
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(4rem, 12vw, 7rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.connection-count-text {
+  max-width: 430px;
+  margin: 0 auto 28px;
+  font-size: 1.05rem;
+}
+
+.connection-button {
+  padding: 16px 28px;
+
+  background: var(--coral);
+  color: white;
+
+  border: 3px solid var(--text);
+  border-radius: 999px;
+  box-shadow: 0 5px 0 var(--text);
+
+  font-family: var(--font-display), sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.connection-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0 var(--text);
+}
+
+.connection-button-note {
+  max-width: 460px;
+  margin: 18px auto 0;
+
+  color: var(--text);
+  opacity: 0.75;
+
+  font-size: 0.85rem;
+}
+
+
+/* ---------- How it works ---------- */
+
+.connection-how-section {
+  padding: 40px 0 90px;
+}
+
+.connection-section-heading {
+  max-width: 620px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.connection-section-heading h2 {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+}
+
+.connection-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.connection-step {
+  padding: 24px;
+
+  border: 3px solid var(--text);
+  border-radius: 18px;
+  box-shadow: 5px 5px 0 var(--text);
+
+  background: white;
+}
+
+.connection-step span {
+  display: block;
+  margin-bottom: 14px;
+
+  color: var(--coral);
+
+  font-family: var(--font-display), sans-serif;
+  font-weight: 700;
+}
+
+.connection-step h3 {
+  margin-bottom: 8px;
+}
+
+.connection-step p {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+
+/* ---------- Conversation starters ---------- */
+
+.conversation-starters-section {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 50px 0 90px;
+  text-align: center;
+}
+
+.conversation-starters-section h2 {
+  margin-bottom: 28px;
+  font-size: clamp(2rem, 5vw, 2.7rem);
+}
+
+.conversation-starters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.conversation-starter {
+  padding: 22px;
+
+  border: 3px solid var(--text);
+  border-radius: 16px;
+  box-shadow: 4px 4px 0 var(--text);
+
+  font-weight: 700;
+}
+
+
+/* ---------- Why ---------- */
+
+.connection-why-section {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 60px 0 90px;
+  text-align: center;
+}
+
+.connection-why-section h2 {
+  margin-bottom: 18px;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+}
+
+.connection-why-section > p {
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.connection-message {
+  margin-top: 30px;
+  padding: 30px;
+
+  background: var(--cream);
+
+  border: 3px solid var(--text);
+  border-radius: 20px;
+  box-shadow: 6px 6px 0 var(--text);
+}
+
+.connection-message p {
+  margin: 4px 0;
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.connection-message strong {
+  display: block;
+  margin-top: 14px;
+
+  color: var(--coral);
+
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.6rem;
+}
+
+
+/* ---------- Final CTA ---------- */
+
+.connection-final-cta {
+  margin: 20px 0 100px;
+  padding: 50px 28px;
+
+  background: var(--text);
+  color: white;
+
+  border-radius: 24px;
+
+  text-align: center;
+}
+
+.connection-final-cta h2 {
+  margin-bottom: 12px;
+  color: white;
+}
+
+.connection-final-cta p {
+  max-width: 540px;
+  margin: 0 auto 24px;
+
+  color: var(--cream);
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 800px) {
+  .connection-bench-hero {
+    padding-top: 50px;
+  }
+
+  .connection-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .conversation-starters {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .connection-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .connection-counter-section {
+    padding: 38px 20px;
+  }
+}
