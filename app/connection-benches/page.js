@@ -1,3 +1,6 @@
+import ConnectionCounter from '../components/ConnectionCounter';
+import BenchRequestForm from '../components/BenchRequestForm';
+
 export const metadata = {
   title: 'Connection Benches — Operation Reconnect',
   description:
@@ -8,7 +11,9 @@ export default function ConnectionBenchesPage() {
   return (
     <main>
       <section className="connection-bench-hero">
-        <p className="small-heading">OPERATION RECONNECT</p>
+        <p className="small-heading">
+          OPERATION RECONNECT
+        </p>
 
         <h1>
           Sit Down.
@@ -30,40 +35,25 @@ export default function ConnectionBenchesPage() {
         </p>
       </section>
 
-      <section className="connection-counter-section">
-        <p className="small-heading">CONNECTIONS MADE</p>
-
-        <div className="connection-count">
-          0
-        </div>
-
-        <p className="connection-count-text">
-          conversations that may not have happened otherwise
-        </p>
-
-        <button
-          type="button"
-          className="connection-button"
-        >
-          I Connected With Someone
-        </button>
-
-        <p className="connection-button-note">
-          Met someone at a Connection Bench? Tap the button and add
-          your connection to the community tally.
-        </p>
-      </section>
+      <ConnectionCounter />
 
       <section className="connection-how-section">
         <div className="connection-section-heading">
-          <p className="small-heading">HOW IT WORKS</p>
-          <h2>One Small Conversation at a Time</h2>
+          <p className="small-heading">
+            HOW IT WORKS
+          </p>
+
+          <h2>
+            One Small Conversation at a Time
+          </h2>
         </div>
 
         <div className="connection-steps">
           <div className="connection-step">
             <span>01</span>
+
             <h3>Sit</h3>
+
             <p>
               Take a seat on a Connection Bench.
             </p>
@@ -71,7 +61,9 @@ export default function ConnectionBenchesPage() {
 
           <div className="connection-step">
             <span>02</span>
+
             <h3>Say Hello</h3>
+
             <p>
               Start with something simple.
             </p>
@@ -79,7 +71,9 @@ export default function ConnectionBenchesPage() {
 
           <div className="connection-step">
             <span>03</span>
+
             <h3>Talk</h3>
+
             <p>
               Have a real conversation with another person.
             </p>
@@ -87,9 +81,11 @@ export default function ConnectionBenchesPage() {
 
           <div className="connection-step">
             <span>04</span>
+
             <h3>Count It</h3>
+
             <p>
-              Tap the button above and add your connection to the tally.
+              Add your connection to the community tally.
             </p>
           </div>
         </div>
@@ -142,7 +138,10 @@ export default function ConnectionBenchesPage() {
           <p>No app.</p>
           <p>No profile.</p>
           <p>No followers.</p>
-          <strong>Just another person.</strong>
+
+          <strong>
+            Just another person.
+          </strong>
         </div>
       </section>
 
@@ -156,12 +155,12 @@ export default function ConnectionBenchesPage() {
           feels a little easier.
         </p>
 
-        <a
-          href="mailto:operationreconnecthp@gmail.com?subject=Connection Bench Enquiry"
-          className="register-button"
-        >
-          Bring a Connection Bench Here
-        </a>
+        <p className="bench-cost-intro">
+          $20 covers the cost of the Connection Bench plaque and
+          delivery anywhere in Australia.
+        </p>
+
+        <BenchRequestForm />
       </section>
     </main>
   );

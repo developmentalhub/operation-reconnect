@@ -2665,3 +2665,285 @@ main {
     padding: 38px 20px;
   }
 }
+
+/* =========================================================
+   CONNECTION CHALLENGE
+   ========================================================= */
+
+.connection-counter-section h2 {
+  margin-bottom: 12px;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+}
+
+.connection-challenge-text {
+  max-width: 560px;
+  margin: 0 auto 24px;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.connection-progress {
+  width: 100%;
+  max-width: 520px;
+  height: 20px;
+  margin: 20px auto 30px;
+
+  background: white;
+
+  border: 3px solid var(--text);
+  border-radius: 999px;
+
+  overflow: hidden;
+}
+
+.connection-progress-fill {
+  height: 100%;
+
+  background: var(--green);
+
+  transition: width 0.4s ease;
+}
+
+.connection-submit-form {
+  max-width: 500px;
+  margin: 28px auto 0;
+  padding: 24px;
+
+  background: white;
+
+  border: 3px solid var(--text);
+  border-radius: 18px;
+
+  text-align: left;
+}
+
+.connection-submit-form h3 {
+  margin-bottom: 6px;
+}
+
+.connection-submit-form > p {
+  margin-bottom: 20px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.connection-submit-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  margin-bottom: 16px;
+}
+
+.connection-submit-form label span {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.connection-submit-form input {
+  width: 100%;
+  padding: 14px 16px;
+
+  border: 2px solid #cbc7cf;
+  border-radius: 12px;
+
+  font: inherit;
+}
+
+.connection-submit-form input:focus {
+  outline: none;
+  border-color: var(--blue);
+}
+
+.connection-cancel-button {
+  width: 100%;
+
+  margin-top: 12px;
+  padding: 11px 18px;
+
+  background: transparent;
+  color: var(--muted);
+
+  border: 0;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.connection-success-message {
+  max-width: 520px;
+  margin: 22px auto 0;
+  padding: 14px 16px;
+
+  background: color-mix(in srgb, var(--green) 20%, white);
+
+  border: 2px solid var(--text);
+  border-radius: 12px;
+
+  font-weight: 700;
+}
+
+/* =========================================================
+   CONNECTION BENCH REQUEST FORM
+   ========================================================= */
+
+.bench-cost-intro {
+  max-width: 560px;
+  margin: 16px auto 28px;
+
+  color: var(--cream);
+
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.bench-request-form {
+  max-width: 760px;
+  margin: 32px auto 0;
+  padding: 30px;
+
+  background: white;
+  color: var(--text);
+
+  border: 4px solid var(--text);
+  border-radius: 22px;
+  box-shadow: 8px 8px 0 var(--yellow);
+
+  text-align: left;
+}
+
+.bench-request-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.bench-request-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bench-request-form label span {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.bench-request-form input,
+.bench-request-form select,
+.bench-request-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+
+  background: white;
+  color: var(--text);
+
+  border: 2px solid #cbc7cf;
+  border-radius: 12px;
+
+  font: inherit;
+}
+
+.bench-request-form textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.bench-request-form input:focus,
+.bench-request-form select:focus,
+.bench-request-form textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+}
+
+.bench-request-full {
+  grid-column: 1 / -1;
+}
+
+.bench-cost-box {
+  margin: 24px 0;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 18px;
+
+  background: var(--yellow);
+
+  border: 3px solid var(--text);
+  border-radius: 16px;
+}
+
+.bench-cost-box > strong {
+  font-family: var(--font-display), sans-serif;
+  font-size: 2rem;
+}
+
+.bench-cost-box h3 {
+  margin-bottom: 2px;
+}
+
+.bench-cost-box p {
+  margin: 0;
+
+  color: var(--text);
+  opacity: 0.8;
+
+  font-size: 0.9rem;
+}
+
+.bench-request-submit {
+  width: 100%;
+}
+
+.bench-request-note {
+  margin-top: 14px;
+
+  color: var(--muted);
+
+  font-size: 0.82rem;
+  text-align: center;
+}
+
+.bench-request-success {
+  max-width: 560px;
+  margin: 32px auto 0;
+  padding: 34px;
+
+  background: white;
+  color: var(--text);
+
+  border: 4px solid var(--text);
+  border-radius: 22px;
+  box-shadow: 8px 8px 0 var(--yellow);
+
+  text-align: center;
+}
+
+.bench-request-success h3 {
+  margin-bottom: 10px;
+}
+
+.bench-request-success p {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 700px) {
+  .bench-request-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bench-request-full {
+    grid-column: auto;
+  }
+
+  .bench-request-form {
+    padding: 22px;
+  }
+
+  .bench-cost-box {
+    align-items: flex-start;
+  }
+}
