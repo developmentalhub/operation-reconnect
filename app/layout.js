@@ -1,6 +1,7 @@
 import './globals.css';
 import Link from 'next/link';
 import { Space_Grotesk, Inter, Kalam } from 'next/font/google';
+import { Analytics } from "@vercel/analytics/next"
 
 const display = Space_Grotesk({
   subsets: ['latin'],
